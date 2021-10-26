@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Widgets</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+
+  <body>
+    <!-- partial:index.partial.html -->
+<div class="grid" data-columns>
+    <section class="block">
+    <div class="btns">
+      <input type="radio" name="toggle" id="nav-toggle" checked/>
+      <input type="radio" name="toggle" id="fav-toggle" />
+      <input type="radio" name="toggle" id="set-toggle" />
+      <input type="radio" name="toggle" id="mail-toggle" />
+      <input type="radio" name="toggle" id="search-toggle" />
+      <div class="tabs">
+        <label for="nav-toggle" class='fontawesome-align-justify'></label>
+        <label for="fav-toggle" class='fontawesome-star'></label>
+        <label for="set-toggle" class='fontawesome-cog'></label>
+        <label for="mail-toggle" class='fontawesome-envelope-alt'></label>
+        <label for="search-toggle" class='fontawesome-zoom-out'></label>
+      </div>
+      <div class="content">
+        <div class="nav-content">
+          <ul>
+            <li>Navigation 01</li>
+            <li>Navigation 02</li>
+            <li>Navigation 03</li>
+            <li>Navigation 04</li>
+          </ul>
+        </div>
+        <div class="fav-content">
+          <ul>
+            <li><span class='fontawesome-star'></span>Item 01</li>
+            <li><span class='fontawesome-star'></span>Item 02</li>
+            <li><span class='fontawesome-star'></span>Item 03</li>
+            <li><span class='fontawesome-star'></span>Item 04</li>
+          </ul>
+        </div>
+        <div class="set-content">
+          <ul>
+            <li>My Profile</li>
+            <li>Account Settings</li>
+            <li>Support</li>
+            <li>Log Out</li>
+          </ul>
+        </div>
+        <div class="mail-content">
+          <ul class='m-opts'>
+            <li><span class='cnt'>5</span>Inbox</li>
+            <li><span class='cnt'>0</span>Sent</li>
+            <li><span class='cnt'>2</span>Deleted</li>
+            <li><span class='cnt'>1</span>Drafts</li>
+          </ul>
+        </div>
+        <div class="search-content">
+          <input type='search' placeholder="Search" />
+          <button>Go</button>
+        </div>
+      </div>
+  </section>
+  <section class="block">
+    <div class='clock'>
+      <span>
+        <span id = 'time'></span>
+      <span id='ampm'></span>
+      </span>
+    </div>
+    <div class='opts'>
+      <button class='fontawesome-cog' id='setting'></button>
+      <button class='fontawesome-time' id='alrm'</button>
+    </div>
+  </section>
+  <section class='block'>
+     <div class='weather'>
+        <span id ='dn'></span>
+        <span id='wea'></span>
+        <span id='tem'></span>
+    </div>
+  </section>
+   <section class="block">
+    <div class="calendar-wrapper">
+      <button id="btnPrev" type="button">Prev</button>
+      <button id="btnNext" type="button">Next</button>
+      <div id="calendar"></div>
+    </div>
+  </section>
+  <section class="block">
+    <div class='calc-wrap'>
+      <div id="calc">
+        <div class="top">
+          <span class="clear">c</span>
+          <div class="result"></div>
+        </div>
+        <div class="keys">
+          <span>7</span>
+          <span>8</span>
+          <span>9</span>
+          <span class="op">+</span>
+          <span>4</span>
+          <span>5</span>
+          <span>6</span>
+          <span class="op">-</span>
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+          <span class="op">÷</span>
+          <span>0</span>
+          <span>.</span>
+          <span class="eval">=</span>
+          <span class="op mult">x</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="block">
+    <div class="sticky">
+      <div class="note">
+        <div class="head">My Notes</div>
+        <div class="title">
+          <input type="text" name="title" class='snote' placeholder="Enter Title">
+        </div>
+        <div class="content">
+          <textarea name="note" placeholder="Add Sticky Note..."></textarea>
+        </div>
+      </div>
+  </section>
+  <section class='block'>
+    <div class="chat-container">
+      <div class="header">
+        <h2>Messages</h2>
+      </div>
+      <div class="chat-box">
+        <div class="message-box left">
+          <div class="picture">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/131045/smileyfour.gif" title="user name" />
+            <span class="time">6 mins</span>
+          </div>
+          <div class="message">
+            <span>Joe Schmoe</span>
+            <p>There's no easy way to explain this piece of code...</p>
+          </div>
+        </div>
+        <div class="message-box right">
+          <div class="picture">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/131045/smileycoffee.gif" title="user name" />
+            <span class="time">2 mins</span>
+          </div>
+          <div class="message">
+            <span>You</span>
+            <p>Just call it an algorithm...</p>
+          </div>
+        </div>
+        <div class="enter">
+          <input type="text" placeholder="Enter your message.." />
+          <a href="#" class="send">Send</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class='block'>
+    <div class="todo-container">
+      <h2>Task List</h2>
+      <form action="#" id='todo'>
+        <input type="text" name="item" id="item" placeholder="Add New" />
+      </form>
+      <ul id="list"></ul>
+      <button id='clear'>Clear Storage</button>
+    </div>
+  </section>
+  <section class='block'>
+    <div class='player'>
+     <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/131045/musicians_guild_logo.jpg'/> 
+       <div class="pbar">
+      <span class="progress-bar" style="width: 95%;">
+        <span class="shade warm"></span>
+      </span>   
+         <p>3:36</p>
+    </div>
+  <div class='body'>
+    <div class='left'>
+      <h1>Various Artists</h1>
+      <h2>The Mix Tape</h2>
+      <h2><span class='act'>Now Playing:</span> Track 12</h2>
+    </div>
+    </div>
+      <div class='cntrl'>
+        <button id='play'><span class='fontawesome-fast-backward'></span></button>
+        <button id='play'><span class='fontawesome-play'></span></button>
+        <button id='pause'><span class='fontawesome-pause'></span></button>
+        <button id='pause'><span class='fontawesome-fast-forward'></span></button>  
+      </div>
+    </div>
+  </section>
+  <section class='block'>
+    <div class="social">
+      <h2>Social Bar</h2>
+      <span><i class="fontawesome-facebook"></i></span>
+      <span><i class="fontawesome-twitter"></i></span>
+      <span><i class="fontawesome-google-plus"></i></span>
+      <span><i class="fontawesome-camera-retro"></i></span>
+      <span><i class="fontawesome-github-alt"></i></span>
+      <span><i class="fontawesome-linkedin"></i></span>
+      <span><i class="fontawesome-globe"></i></span>
+    </div>
+  </section>
+  <section class='block'>
+    <div class="contacts">
+      <header>
+        <h4>
+          Contacts<br />
+        </h4>
+      </header>
+      <div class='icons'>
+        <span class='fontawesome-cogs'></span>
+        <span class='fontawesome-pencil'></span>
+        <span class='fontawesome-plus-sign'><span>
+        <span class='fontawesome-minus-sign'></span>
+        <span class='fontawesome-info-sign'></span>
+      </div>
+      <ul class="contact-list">
+        <li>
+          <div class="name">Adam</div>
+          <div class="info">adam@email.com</div>
+        </li>
+        <li>
+          <div class="name">Ben</div>
+          <div class="info">ben@email.com</div>
+        </li>
+        <li>
+          <div class="name">Chris</div>
+          <div class="info">chris@email.com</div>
+        </li>
+        <li>
+          <div class="name">Danny</div>
+          <div class="info">danny@email.com</div>
+        </li>
+        <li>
+          <div class="name">Ed</div>
+          <div class="info">ed@email.com</div>
+        </li>
+        <li>
+          <div class="name">Edgar</div>
+          <div class="info">edgar@email.com</div>
+        </li>
+        <li>
+          <div class="name">Fred</div>
+          <div class="info">fred@email.com</div>
+        </li>
+        <li>
+          <div class="name">Harry</div>
+          <div class="info">harr@email.com</div>
+        </li>
+      </ul>
+   </div>
+ </section>
+<section class='block'>
+  <form class='file'>
+   <input type="file">
+  </form>
+</section>
+</div>
+<!-- partial -->
+  </body>
+</html>
